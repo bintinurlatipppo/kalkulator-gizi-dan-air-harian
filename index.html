@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Gizi & Air Harian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Kalkulator Gizi & Air Harian 🥗</h1>
+            <p>Hitung kebutuhan kalori dan air minum harian Anda dengan mudah.</p>
+        </header>
+
+        <main>
+            <div class="calculator">
+                <h2>Input Data Diri</h2>
+                <form id="calculatorForm">
+                    <div class="form-group">
+                        <label for="age">Umur (tahun)</label>
+                        <input type="number" id="age" placeholder="Contoh: 25" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Berat Badan (kg)</label>
+                        <input type="number" id="weight" placeholder="Contoh: 60" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="activity">Tingkat Aktivitas</label>
+                        <select id="activity" required>
+                            <option value="1.2">Jarang (Terlalu sibuk)</option>
+                            <option value="1.375">Ringan (Olahraga 1-3 kali/minggu)</option>
+                            <option value="1.55">Sedang (Olahraga 3-5 kali/minggu)</option>
+                            <option value="1.725">Aktif (Olahraga 6-7 kali/minggu)</option>
+                            <option value="1.9">Sangat Aktif (Pekerjaan fisik/atlet)</option>
+                        </select>
+                    </div>
+                    <button type="submit">Hitung Sekarang</button>
+                </form>
+            </div>
+
+            <div id="result" class="result-container" style="display:none;">
+                <h2>Hasil Perhitungan</h2>
+                <div class="result-item">
+                    <h3>Kebutuhan Kalori Harian Anda:</h3>
+                    <p id="calorieResult"></p>
+                </div>
+                <div class="result-item">
+                    <h3>Kebutuhan Air Minum Harian Anda:</h3>
+                    <p id="waterResult"></p>
+                </div>
+                <div class="meal-suggestion">
+                    <h3>Saran Menu Makanan Sehat</h3>
+                    <div id="mealPlan"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Dibuat oleh: [binti eggy SMKN 1 Grogol]</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
